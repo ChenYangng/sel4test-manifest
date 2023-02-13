@@ -9,6 +9,7 @@
   <remote name="seL4" fetch="https://github.com/seL4"/>
   <remote name="ChenYangng" fetch="."/>
   <remote name="sel4proj" fetch="https://github.com/sel4proj"/>
+  <remote name="foxsen" fetch="https://github.com/foxsen"/>
   
   <default remote="ChenYangng" revision="loongarch"/>
   
@@ -27,4 +28,9 @@
     <linkfile src="easy-settings.cmake" dest="easy-settings.cmake"/>
   </project>
   <project name="util_libs.git" path="projects/util_libs" revision="loongarch" upstream="loongarch" dest-branch="loongarch"/>
+  <project name="seL4-Loongarch.git" path="tools/seL4-Loongarch" revision="main" upstream="main" dest-branch="main">
+    <linkfile src="build.sh" dest="build.sh"/>
+    <linkfile src="run_debug.sh" dest="run_debug.sh"/>
+  </project>
+  <project name="qemu-loongarch-runenv.git" path="tools/qemu-loongarch-runenv" remote="foxsen" revision="main" upstream="main" dest-branch="main"/>
 </manifest>
